@@ -5,9 +5,9 @@ im=Image.open(nom_fichier)
 taille=im.size
 
 
-image1=Image.new("RGB",taille)
-image2=Image.new("RGB",taille)
-image3=Image.new("RGB",taille)
+image1=Image.new("RGB",taille) 
+image2=Image.new("RGB",taille) 
+image3=Image.new("RGB",taille) 
 
 for i in range (0,taille[0]):
     for j in range (0,taille[1]):
@@ -22,5 +22,15 @@ image1.save("image1.bmp")
 image2.save("image2.bmp")
 image3.save("image3.bmp")
 
-        
+#  QUESTIONS : 
+
+# EX1
+
+# 1) Image 1,2 et 3 correspondent Chacun à une couleur, le rouge le vert et le bleu.
+# 3) lorsque l'on lance le programme avec le fichier 'singeBMP.bmp', la console nous relance une erreur
+#  comme quoi elle n'arrive pas à ouvrir l'image, peut-être car l'image n'est composée que de pixels 
+# gris ???
+
+
+# EX 2
 
