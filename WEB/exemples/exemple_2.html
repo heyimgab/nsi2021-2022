@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h2> Quelques exemples de gestion d'événements </h2>
+	<script type="text/javascript">
+		function changeCouleur1()
+			{document.getElementById('bouton1').style.background='yellow';}
+
+		function changeCouleur2(element)
+			{element.style.background='blue';
+			element.style.color='white';}
+	</script>
+
+	<form>
+		<h3>1. Un bouton qui affiche la date</h3>
+		<p>Ici la fonction javascript est directement écrit dans la valeur de l'attribut onclick.</p>
+		<button  type="button"   onclick="document.getElementById('demo').innerHTML='date :'+Date()" > Donner la date </button> 
+		<span id="demo">Date : </span>
+
+		<h3>2. Un premier bouton qui change de couleur</h3>
+		<p>Modif de couleur de fond du bouton, en appelant une fonction : </p>
+		<button id='bouton1' type="button"   onclick="changeCouleur1()" >
+			Changez ma couleur</button>
+
+		<h3>3. Un deuxième bouton qui change de couleur</h3>
+		<p> On va modifier la couleur de fond du bouton, en appelant une fonction en transmettant l'argument <em>this</em> qui représente le 		contexte dans lequel on est : ici, this rprésente donc l'élement sur lequel on clique</p>
+
+		<button type="button"   onclick="changeCouleur2(this)" >
+			Changez ma couleur</button>
+
+		<h3>4. Un elt de formulaire qui change de couleur au focus</h3>
+			On utilise la même fonction changeCouleur2 <input type="text" name="entree" onclick="changeCouleur2(this)" >
+
+		<h3>5. Récupération de valeur de formulaire</h3>
+			Avec un curseur 
+		<input type="range" name="curseur" min="0" max="100" 
+			onchange="document.getElementById('valeurCurseur').innerHTML=this.value" >
+		<p>valeur du curseur : <span id='valeurCurseur'> </span></p>
+		<br><br><br>
+		<br>
+	</form>
+</body>
+</html>

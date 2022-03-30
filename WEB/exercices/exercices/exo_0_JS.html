@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Dessiner et programmer avec canvas_TP1</title>
+  </head>
+  <body>
+  	<h1>Du dessin d'art avec Javascript</h1>
+    <section>
+  		  <canvas id="caneva" width="400" height="400" style="border: solid black 1px"></canvas>
+        <div>
+          <input id="bouton_rouge" type="button" value="rouge" onclick="changer_rouge()">
+          <input id="bouton_vert" type="button" value="vert" onclick="changer_vert()">
+          <input id="bouton_bleu" type="button" value="bleu" onclick="changer_bleu()">
+          <input type="button" value="Effacer" onclick='effacer()'>
+        </div>
+    </section>
+  </body>
+</html>
+<script>
+var cadre=document.getElementById("caneva");
+cadre.addEventListener("mousemove",dessiner,false);
+// on déclare un espace de dessin 2d
+const ctx = cadre.getContext("2d");
+// on declare une couleur
+var rouge=5;
+var vert=19;
+var bleu=50;
+
+function effacer()
+  {ctx.clearRect(0, 0, caneva.width, caneva.height);}
+
+function dessiner(evt){
+  // on récupère les coordonnées de la souris dans le canvas
+  var mousePos = getMousePos(cadre, evt);
+  var x=mousePos[0];
+  var y=mousePos[1];
+  // on dessine un disque
+  ctx.beginPath();
+  ctx.strokeStyle=couleur_rvb(rouge,vert,bleu);
+  ctx.arc(x,y, 1, 0, 2*Math.PI);
+  ctx.stroke();
+}
+
+function changer_rouge(){
+  rouge=255;
+  vert=0;
+  bleu=0;
+}
+function changer_vert(){
+  rouge=0;
+  vert=255;
+  bleu=0;
+}
+function changer_bleu(){
+  rouge=0;
+  vert=0;
+  bleu=255;
+}
+// fonction qui retourne une chaine de caractere "rgb(r,v,b)
+// on convertit un entier n en str avec la methode n.toString()
+function couleur_rvb(r,v,b)
+{
+  var couleur="rgb("+r.toString()+","+v.toString()+","+b.toString()+")";
+  return couleur;
+}
+
+function getMousePos(canvas, evt) 
+{
+  var rect = canvas.getBoundingClientRect();
+  var coord=[evt.clientX - rect.left,evt.clientY - rect.top];
+  return (coord);
+  }
+</script>

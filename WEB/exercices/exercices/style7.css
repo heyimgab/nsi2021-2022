@@ -1,0 +1,19 @@
+body{
+    font-size: 20px;
+    }
+html{
+    width: 80%;
+    margin: 0 auto;
+    }
+h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    border-radius: 10%;
+    text-align: center;
+}
+details{
+    border: 8px ridge yellow;
+    color: orange;
+    }

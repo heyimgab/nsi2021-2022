@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title> mouseover  </title>
+		<link rel="stylesheet" type="text/css" href="style3.css">
+	</head>
+	<body>
+		<!-- ajouter l'évenement onmouseover pour appeler la fonction changer-->
+		<p id="flash">Je flashe lorsqu'on me survole.</p>
+ 		    	
+    	<script>
+    		/*déclaration d'une variable ciblant un élément html: */
+    		let paragraphe = document.querySelector("#flash");
+    		
+    		/*compléter la fonction changer(element) pour modifier les paramètres*/
+    		function changer(element){
+	        	element.style.color = "white";
+	        	/* mettre le fond en jaune */
+	        	element.style.borderRadius = "20px";
+	        	element.style.fontSize = "2rem";
+	        	/* changer le texte , mettre 'vous m'avez flashé'*/
+	        	}
+
+    		/*Un écouteur sur l'événement mouseout: */
+    		paragraphe.addEventListener( "mouseout",
+    		function () {
+        		paragraphe.style.color = "black";
+	        	paragraphe.style.backgroundColor = "lavender";
+	        	paragraphe.style.borderRadius = "0px";
+	        	paragraphe.style.fontSize = "0.8rem";
+	        	paragraphe.innerHTML = "je flashe lorsque l'on me survole";
+    		}
+    		, false)
+		</script>
+	</body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Création Formulaire</title>
+</head>
+<body>
+
+	<form>
+		<select name="titre">
+            <option>Mlle</option><option>Mme</option><option>M.</option>
+        </select>
+		<input type="text" name="entree">
+        <p>Prénom : <input type="text" name="entree"></p>
+
+		
+		<input type="range" name="curseur" min="0" max="100" 
+			onchange="document.getElementById('valeurCurseur').innerHTML=this.value" >
+		<p>valeur du curseur : <span id='valeurCurseur'> </span></p>
+		<br><br><br>
+		<br>
+	</form>
+</body>
+</html>

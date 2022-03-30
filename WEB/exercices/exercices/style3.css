@@ -1,0 +1,23 @@
+ body{
+     font-size: 20px;
+     }
+html{
+    width: 80%;
+    margin: 0 auto;
+    }
+h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    border-radius: 10%;
+    }
+p{
+    font-size: 0.8rem;
+    color: black;
+    background-color: lavender;
+    text-align: center;
+    height: 5rem;
+    line-height: 5rem;
+    border-radius: 0;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercice 7</title>
+    <link rel="stylesheet" type="text/css" href="style7.css">
+</head>
+<body>
+<script type="text/javascript">
+    /*déclaration d'une variable ciblant un élément html: */
+    let aide = document.querySelector("details");
+    /*Un écouteur sur l'événement toggle sur l'aide: */
+    aide.addEventListener( "toggle",
+    () => {
+    aide.innerHTML = "Attention, ne vous précipitez pas sur les aides. Commencez par réfléchir!";
+    }
+    , false)
+
+</script>
+
+<h1>Exercices</h1>
+<h2>Exercice 7</h2>
+
+<div id="enonce"> 
+
+    <p>Comprendre ce qu'il se passe quand vous consultez le paragraphe Aide ci-dessous.</p>
+    <p>Ajoutez au script un événement qui permette de faire réapparaître l'aide en survolant l'énoncé
+    de l'exercice.</p>
+
+</div>
+
+<details>
+      <summary>Aide</summary>
+      <p>
+        Lire sur 
+        <a href='https://www.w3schools.com/jsref/event_ontoggle.asp'>cette page</a>  
+        un descriptif de l'événement toggle.
+    </p>    
+</details> 
+
+</body>
+</html>
