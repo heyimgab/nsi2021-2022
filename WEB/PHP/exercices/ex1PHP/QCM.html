@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>QCM PHP</title>
+        <style>
+        	li
+        	{
+        		margin: 20px;
+        	}
+        	em
+        	{
+        		font-weight: bold;
+        	}
+        </style>
+    </head>
+
+    <body>
+        <h2> Petit QCM sur les points de base en PHP</h2>
+        <form method="get" action="resultatQCM_prof.php">
+             <fieldset>
+                    <legend>Syntaxe</legend>
+                    <div>
+                    	<ol>
+	                        <li><p>Quelle fonction PHP permet d'écrire du code HTML ?</p>
+		                        <input type="radio" name="q1" id="rep11" value="rep11"> 
+		                        <label for="rep11">print()</label><br>
+		                        <input type="radio" name="q1" id="rep12" value="rep12"> 
+		                        <label for="rep12">echo()</label><br>
+		                        <input type="radio" name="q1" id="rep13" value="rep13"> 
+		                        <label for="rep13">write()</label>
+	                    	</li>
+	                    	<li>
+		                        <label for="q2">Quel symbole doit-on trouver à la fin des instructions PHP ? (donner le symbole et non le mot)</label><br><br>
+		                        <input  type="text"  name="q2" id='q2'>
+		                    </li>
+
+                        	<li><p>Que va afficher l'instruction <em> echo 'voici un "test" php' </em> sur la page web  ?</p>
+		                        <input type="radio" name="q3" id="rep31" value="rep31"> 
+		                        <label for="rep31">voici un test php</label><br>
+		                        <input type="radio" name="q3" id="rep32" value="rep32"> 
+		                        <label for="rep32">voici un "test" php</label><br>
+		                        <input type="radio" name="q3" id="rep33" value="rep33"> 
+		                        <label for="rep33">rien, cela provoquerait une erreur</label><br>
+		                        <input type="radio" name="q3" id="rep34" value="rep34"> 
+		                        <label for="rep34">'voici un "test" php'</label>
+							</li>
+		                     <li> <p>Soit une variable $var=10. Sélectionner les instructions permettant d'écrire :
+		                        <br>
+		                        La variable $var vaut (valeur de  $var)<p>
+		                        
+		                        <input type="checkbox" id="rep41" name="q4[]" value="rep41">
+		                        <label for="rep41">echo (La variable \$var vaut '$var')   </label>
+								<br>
+								<input type="checkbox" id="rep42" name="q4[]" value="rep42">
+								<label for="rep42">echo ("La variable \$var vaut '$var'") </label>
+								<br>
+								<input type="checkbox" id="rep43" name="q4[]" value="rep43">
+								<label for="rep43">echo ("La variable \$var vaut".$var) </label>
+								<br>
+								<input type="checkbox" id="rep44" name="q4[]" value="rep44">
+								<label for="rep44">echo ("La variable \$var vaut $var") </label>
+								<brb>
+							</li>
+						</ol>
+                    </div>       
+             </fieldset>
+             <fieldset>
+                <legend>Récupération données</legend>
+                	<ol>
+                        <li> <p>Donner le nom de la variable permettant de récupérer les données transmises par la méthode POST. <p>
+                        	<input type="text" id="q5" name="q5">
+						</li>
+						<li> <p>Soit le tableau associatif suivant créé par l'instruction ci-dessous :<br>
+						$ages = ['Mathilde' => 27, 'Pierre' => 29, 'Amandine' => 21];<br></p>
+						 		<p>Quelle instruction permet d'afficher l'age d'Amandine ?</p> 
+                       			 <input type="radio" name="q6" id="rep61" value="rep61"> 
+		                        <label for="rep61">$GET(Amandine)</label><br>
+		                        <input type="radio" name="q6" id="rep62" value="rep62"> 
+		                        <label for="rep62">GET("Amandine")</label><br>
+		                        <input type="radio" name="q6" id="rep63" value="rep63"> 
+		                        <label for="rep63">$_GET["Amandine"]</label><br>
+		                        <input type="radio" name="q6" id="rep64" value="rep64"> 
+		                        <label for="rep64">$GET("Amandine")</label><br>
+						</li>
+             </fieldset>
+             <fieldset>
+                <legend>Envoi</legend>
+                <p>Après avoir vérifié vos réponses, soumettez les à notation. </p>
+                <button type="submit">Envoyer mes réponses</button>
+             </fieldset>
+         </form>
+    </body>
+
+</html>
+                

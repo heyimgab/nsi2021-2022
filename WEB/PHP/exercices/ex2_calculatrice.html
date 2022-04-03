@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculatrice</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			label {display : inline-block; }
+			.operation {width: 15px;margin-left: 10px;}
+		</style>
+	<body> 
+		<h1> Ex PHP n°3 : calculatrice</h1>
+		<form action="resultat.php" method="GET"> 
+			<label for="nombre1"> 1er nombre : </label>
+			<input type="number" step="any" name='nombre1'  /><br/><br/>
+			<p> Opération à effectuer</p>
+			<label for="plus" class="operation"> + </label>
+			<input type="radio" name="operation" id="plus" value="plus" />
+			<br/>
+			<label for="moins" class="operation"> - </label>
+			<input type="radio" name="operation" id="moins" value="moins" />
+			<br/>
+			<label for="fois" class="operation"> * </label>
+			<input type="radio" name="operation" id="fois" value="fois" />
+			<br/>
+			<label for="divise" class="operation"> / </label>
+			<input type="radio" name="operation" id="divise" value="divise" />
+			<br/><br/>		
+			
+			<label for="nombre2"> 2eme nombre : </label>
+			<input type="number" step="any" name='nombre2' /><br/><br/>
+			<input type="submit" name="btOK" value="Valider">
+		</form> 
+	</body>
+</html>
